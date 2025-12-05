@@ -1,18 +1,19 @@
 manifestVersion: 1
 id: alex-mempool
-category: bitcoin
-name:  "Mempool.space"
+category: bitcon"
+name: "Mempool (Alex Build)"
 version: "3.2.1-alex1"
 tagline: Be your own explorer
 description: >-
   Run your own instance of The Mempool Open Source Project and trust no one.
 
+releaseNotes: |
+  Custom Mempool build from the official Umbrel app, packaged via Alex Community Store.
   
   Use your own node to beautifully visualize data about the Bitcoin network, transactions, blockchain, mempool, and more.
 
 
   This product includes GeoLite2 data created by MaxMind, available from https://www.maxmind.com
-releaseNotes: >-
   This update brings the mempool app to version 3.2.1, which includes a hotfix for a potential crash loop if the list of mining pools fails to get updated from our GitHub repo.
 
 
