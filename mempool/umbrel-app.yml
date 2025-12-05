@@ -2,7 +2,7 @@ manifestVersion: 1
 id: alex-mempool
 category: bitcoin
 name:  name: "Mempool.space"
-version: "3.2.1-alex2"
+version: "3.2.1-alex1"
 tagline: Be your own explorer
 description: >-
   Run your own instance of The Mempool Open Source Project and trust no one.
