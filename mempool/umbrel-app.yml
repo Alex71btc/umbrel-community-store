@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: alex-mempool
 category: bitcoin
-name:  name: "Mempool.space"
+name:  "Mempool.space"
 version: "3.2.1-alex1"
 tagline: Be your own explorer
 description: >-
