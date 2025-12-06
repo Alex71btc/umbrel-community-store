@@ -7,7 +7,7 @@ services:
       APP_PORT: $APP_ALEX_MEMPOOL_PORT
       PROXY_AUTH_ADD: "false"
   web:
-    image: mempool/frontend:v3.2.1
+    image: mempool/frontend:v3.2.0
     user: "1000:1000"
     init: true
     restart: on-failure
@@ -23,7 +23,7 @@ services:
       default:
         ipv4_address: $APP_ALEX_MEMPOOL_IP
   api:
-    image: mempool/backend:v3.2.1
+    image: mempool/backend:v3.2.0
     user: "1000:1000"
     init: true
     restart: on-failure
