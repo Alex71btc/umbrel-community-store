@@ -2,7 +2,7 @@ manifestVersion: 1
 id: alex-mempool
 category: bitcoin
 name: "Mempool (Alex Build)"
-icon: https://play-lh.googleusercontent.com/WD8hSd9Tir7wp2lLsHXgjB7GyTZKcDm3xhbe6XtceqiIHiSvt5O-XxuVOeIxV9w5X5Q=w240-h480
+icon: http://umbrel.local:8286/i/522f50ab-8b32-478d-a7cc-d310b4414324.png
 version: "3.2.1-alex1"
 tagline: Be your own explorer
 description: >-
