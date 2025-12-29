@@ -1,7 +1,8 @@
 manifestVersion: 1
 id: alex-mempool
-category: bitcon"
+category: bitcoin
 name: "Mempool (Alex Build)"
+icon: assets/icon.png
 version: "3.2.1-alex1"
 tagline: Be your own explorer
 description: >-
