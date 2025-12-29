@@ -1,2 +1,7 @@
 id: alex
 name: Alex Community Store
+
+
+apps:
+  - id: alex-mempool
+    path: alex-mempool
