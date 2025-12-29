@@ -32,6 +32,12 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data:/backend/cache
       - ${UMBREL_ROOT}/app-data/lightning/data/lnd:/lnd:ro
+      - ${APP_DATA_DIR}/patches/backend/common.js:/backend/package/api/common.js:ro
+      - ${APP_DATA_DIR}/patches/backend/network-sync.service.js:/backend/package/tasks/lightning/network-sync.service.js:ro
+      - ${APP_DATA_DIR}/patches/backend/funding-tx-fetcher.js:/backend/package/tasks/lightning/sync-tasks/funding-tx-fetcher.js:ro
+      - ${APP_DATA_DIR}/patches/backend/stats-importer.js:/backend/package/tasks/lightning/sync-tasks/stats-importer.js:ro
+      - ${APP_DATA_DIR}/patches/backend/clightning-convert.js:/backend/package/api/lightning/clightning/clightning-convert.js:ro
+
     environment:
       CORE_RPC_HOST: $APP_BITCOIN_NODE_IP
       CORE_RPC_PORT: $APP_BITCOIN_RPC_PORT
