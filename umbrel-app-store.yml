@@ -1,7 +1,8 @@
 id: alex
 name: Alex Community Store
 
-
 apps:
   - id: alex-mempool
     path: alex-mempool
+  - id: alex-bolt12-pay
+    path: alex-bolt12-pay

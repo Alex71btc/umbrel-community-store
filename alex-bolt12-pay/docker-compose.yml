@@ -1,0 +1,86 @@
+version: "3.8"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: web
+      APP_PORT: 8081
+      PROXY_AUTH_WHITELIST: "/"
+      PROXY_AUTH_BLACKLIST: "/pay,/api/admin,/api/admin/*"
+
+  web:
+    image: alex71btc/bolt12-pay:0.2.49
+    container_name: alex71btc-bolt12-pay-web
+    restart: unless-stopped
+    depends_on:
+      - lndk
+
+    environment:
+      APP_DATA_DIR: /data
+      APP_CONFIG_PATH: /data/config/config.json
+      PAY_UI_SESSION_TTL: "1800"
+      CORS_ORIGINS: "*"
+
+      # --- LNDK ---
+      LNDK_CLI: /usr/local/bin/lndk-cli
+      LNDK_NETWORK: bitcoin
+      LNDK_GRPC_HOST: lndk
+      LNDK_GRPC_PORT: "7000"
+      LNDK_CERT_PATH: /secrets/lnd/tls.cert
+      LNDK_MACAROON_PATH: /secrets/lnd-mainnet/admin.macaroon
+      LNDK_TIMEOUT_SECONDS: "30"
+      ALLOW_PAY_OFFER: "true"
+
+      # --- LND REST ---
+      LND_REST_URL: https://host.docker.internal:8080
+      LND_TLS_CERT_PATH: /secrets/lnd/tls.cert
+      LND_MACAROON_PATH: /secrets/lnd-mainnet/admin.macaroon
+      LND_REST_INSECURE: "false"
+
+      # --- LNURL runtime defaults ---
+      LNURL_MIN_SENDABLE_MSAT: "1000"
+      LNURL_MAX_SENDABLE_MSAT: "1000000000"
+      LNURL_COMMENT_ALLOWED: "120"
+      LNURL_ALIAS_MODE: "shared"
+      LNURL_SHARED_DESCRIPTION: "LNURL payment"
+      LNURL_DEFAULT_DESCRIPTION: "Lightning payment"
+      LNURL_ALIAS_MAP: ""
+
+    dns:
+      - 1.1.1.1
+      - 8.8.8.8
+
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+      - /home/umbrel/umbrel/app-data/lightning/data/lnd:/secrets/lnd:ro
+      - /home/umbrel/umbrel/app-data/lightning/data/lnd/data/chain/bitcoin/mainnet:/secrets/lnd-mainnet:ro
+
+  lndk:
+    image: alex71btc/lndk:stable
+    container_name: alex71btc-bolt12-pay-lndk
+    restart: unless-stopped
+
+    entrypoint:
+      - /bin/sh
+      - -c
+    command:
+      - >
+        sleep 180 &&
+        exec lndk
+        --address=https://host.docker.internal:10009
+        --cert-path=/secrets/lnd/tls.cert
+        --macaroon-path=/secrets/lnd-mainnet/admin.macaroon
+        --data-dir=/lndk-data
+        --grpc-host=0.0.0.0
+        --grpc-port=7000
+
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+    volumes:
+      - ${APP_DATA_DIR}/lndk:/lndk-data
+      - /home/umbrel/umbrel/app-data/lightning/data/lnd:/secrets/lnd:ro
+      - /home/umbrel/umbrel/app-data/lightning/data/lnd/data/chain/bitcoin/mainnet:/secrets/lnd-mainnet:ro
