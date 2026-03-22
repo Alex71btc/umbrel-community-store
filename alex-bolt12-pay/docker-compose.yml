@@ -20,7 +20,7 @@ services:
 
       LNDK_CLI: /usr/local/bin/lndk-cli
       LNDK_NETWORK: bitcoin
-      LNDK_GRPC_HOST: lndk
+      LNDK_GRPC_HOST: https://lndk
       LNDK_GRPC_PORT: "7000"
       LNDK_CERT_PATH: /lnd/tls.cert
       LNDK_MACAROON_PATH: /lnd/data/chain/bitcoin/mainnet/admin.macaroon
