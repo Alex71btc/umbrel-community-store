@@ -3,7 +3,7 @@ id: alex-bolt12-pay
 name: BOLT12 Pay
 tagline: Self-hosted Lightning Address, BOLT12 and Nostr Zap Server
 category: finance
-version: "0.2.50"
+version: "0.2.51"
 port: 8092
 description: >-
   Self-hosted Lightning payment server with BOLT12 offers, LNURL fallback,
