@@ -8,13 +8,15 @@ services:
       PROXY_AUTH_ADD: "false"
 
   web:
-    image: alex71btc/bolt12-pay:0.2.51
+    image: alex71btc/bolt12-pay:0.2.52
     restart: on-failure
     depends_on:
       - lndk
     environment:
       APP_DATA_DIR: /data
-      APP_CONFIG_PATH: /data/config/config.json
+      APP_CONFIG_PATH: /data/config.json
+      CONFIG_JSON_PATH: /data/config.json
+      SECRETS_JSON_PATH: /data/config/secrets.json
       PAY_UI_SESSION_TTL: "1800"
       CORS_ORIGINS: "*"
 
