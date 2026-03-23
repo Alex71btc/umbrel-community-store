@@ -6,10 +6,38 @@ category: finance
 version: "0.2.53"
 port: 8091
 description: >-
-  BOLT12 Pay brings next-generation Lightning payments to LND nodes. Create
-  standard Lightning Addresses, publish BIP353 aliases, create and pay BOLT12
-  Offers, and run your own Nostr Zap + NIP-05 server — fully self-hosted.
+  ⚡ BOLT12 Pay is the first self-hosted app bringing BIP353 Lightning Addresses
+  and native BOLT12 Offer creation and payments to LND nodes.
 
+  If you own a domain, BOLT12 Pay turns it into a powerful Lightning Address
+  and Nostr Zap server with full control over identities, payments, and notifications.
+
+  🔥 Features
+
+  ⚡ BIP353 Lightning Addresses
+  - Publish human-readable Lightning aliases for your domain
+  - Cloudflare-powered automatic DNS publishing
+  - No third-party services required
+
+  ⚡ BOLT12 Offers (experimental)
+  - Create and pay BOLT12 Offers on LND via LNDK
+  - One of the first real-world Offer implementations for LND
+
+  ⚡ Lightning Address / LNURL
+  - Fully self-hosted LNURL server
+  - Compatible with all standard wallets
+
+  ⚡ Nostr Integration
+  - NIP-05 support
+  - Zap receiving + publishing
+  - Encrypted DM notifications
+  - Multi-relay support
+
+  ⚙️ Self-hosted by design
+  - Full control over keys, relays, and identities
+
+  🚨 Experimental
+  - BOLT12 support on LND is cutting-edge and evolving
 developer: Alex71btc
 website: https://github.com/Alex71btc/lndk-pay
 submitter: Alex71btc
