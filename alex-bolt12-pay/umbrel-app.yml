@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: alex-bolt12-pay
 name: BOLT12 Pay
-icon: https://i.imgur.com/Uee2Gix.png
+icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/icon_v2.png
 tagline: First self-hosted BIP353 Lightning Address & BOLT12 Offer app for LND nodes
 category: finance
 version: "0.2.53"
