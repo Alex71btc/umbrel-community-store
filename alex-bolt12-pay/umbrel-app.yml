@@ -57,4 +57,4 @@ path: ""
 defaultUsername: ""
 defaultPassword: ""
 torOnly: false
-icon: icon.png
+icon: icon-maskable.png
