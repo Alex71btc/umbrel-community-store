@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: alex-bolt12-pay
 name: BOLT12 Pay
-icon: https://imgur.com/MYzWS64
+icon: https://i.imgur.com/h2ws7cM.png 
 tagline: First self-hosted BIP353 Lightning Address & BOLT12 Offer app for LND nodes
 category: finance
 version: "0.2.53"
