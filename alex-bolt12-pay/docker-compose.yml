@@ -9,7 +9,7 @@ services:
 
   web:
     image: alex71btc/bolt12-pay:0.2.53
-    restart: on-failure
+    restart: unless-stopped
     depends_on:
       - lndk
     environment:
@@ -47,20 +47,31 @@ services:
 
   lndk:
     image: alex71btc/lndk:stable
-    restart: on-failure
+    restart: unless-stopped
     entrypoint:
       - /bin/sh
       - -c
     command:
       - >
-        sleep 30 &&
-        exec lndk
-        --address=https://lightning_lnd_1:10009
-        --cert-path=/lnd/tls.cert
-        --macaroon-path=/lnd/data/chain/bitcoin/mainnet/admin.macaroon
-        --data-dir=/data/lndk
-        --grpc-host=0.0.0.0
-        --grpc-port=7000
+        echo "Waiting for LND TLS + macaroon..." &&
+        while [ ! -f /lnd/tls.cert ] || [ ! -f /lnd/data/chain/bitcoin/mainnet/admin.macaroon ]; do
+          echo "Waiting for cert/macaroon...";
+          sleep 5;
+        done;
+
+        echo "Waiting for LND gRPC on lightning_lnd_1:10009..." &&
+        while true; do
+          lndk
+          --address=https://lightning_lnd_1:10009
+          --cert-path=/lnd/tls.cert
+          --macaroon-path=/lnd/data/chain/bitcoin/mainnet/admin.macaroon
+          --data-dir=/data/lndk
+          --grpc-host=0.0.0.0
+          --grpc-port=7000;
+
+          echo "LNDK exited or failed. Retrying in 10s...";
+          sleep 10;
+        done
     volumes:
       - ${APP_DATA_DIR}/data:/data
       - ${UMBREL_ROOT}/app-data/lightning/data/lnd:/lnd:ro
