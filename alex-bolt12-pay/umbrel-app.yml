@@ -7,28 +7,32 @@ category: finance
 version: "0.2.65"
 port: 8091
 description: >-
-  Clears your inbox, sends emails, manages your calendar, checks you in for flights.
-  All from WhatsApp, Telegram, or any chat app you already use.
+  Self-hosted Lightning payment and identity server with native BOLT12 support.
 
 
-  The OpenClaw app on umbrelOS provides a seamless setup experience. Just enter your API key and go.
-  A headless browser is configured out of the box so your new AI assistant can immediately interact with the entire internet.
+  Create and receive payments using next-generation BOLT12 offers, Lightning Address (BIP353), and LNURL — all from your own node.
 
 
-  OpenClaw is running inside the umbrelOS app sandbox. It has complete freedom to install software inside its own environment
-  while all your existing apps and data remain securely protected.
+  Includes Nostr identity (NIP-05), Zap support, and real-time notifications, with seamless fallback between BOLT12, LNURL, and BOLT11 for maximum compatibility.
 
 
-  OpenClaw is also running behind the umbrelOS app proxy, so only you can securely access your OpenClaw instance.
+  Designed for sovereign Bitcoin users who want full control over their Lightning infrastructure, identities, and payments.
 
 
-  ## What It Does
-    - **Runs Locally** - Anthropic, OpenAI, or local models. Private by default—your data stays yours. On your Umbrel.
-    - **Any Chat App** - Talk to it on WhatsApp, Telegram, Discord, Slack, Signal, or iMessage. Works in DMs and group chats.
-    - **Persistent Memory** - Remembers you and becomes uniquely yours. Your preferences, your context, your AI.
-    - **Browser Control** - It can browse the web, fill forms, and extract data from any site.
-    - **Sandboxed System Access** - Read and write files, run shell commands, execute scripts within its own sandbox. Your existing data and apps are fully protected.
-    - **Skills & Plugins** - Extend with community skills or build your own. It can even write its own.
+  Features
+    - BOLT12 Offers – Create and pay offers via LNDK
+    - Lightning Address – BIP353 + LNURL server
+    - BOLT11 Fallback – Maximum wallet compatibility
+    - Nostr Identity – NIP-05 support
+    - Zaps & Notifications – Zap support + DM notifications
+    - Multi-Relay Support – Works across multiple relays
+    - Cloudflare DNS – Optional automatic publishing
+    - Self-Hosted – Full control on Umbrel
+    - Mobile-Friendly UI – Clean and optimized UX
+
+
+  Notes
+    - BOLT12 support on LND is still evolving and considered experimental.
 developer: Alex71btc
 website: https://github.com/Alex71btc/lndk-pay
 submitter: Alex71btc
