@@ -23,8 +23,8 @@ description: >-
 
 
  ## Features:
-  • ** BOLT12 Offers (create & pay via LNDK)**.
-  • ** Lightning Address (BIP353 + LNURL server).**
+  •  BOLT12 Offers (create & pay via LNDK).
+  • Lightning Address (BIP353 + LNURL server).
   • BOLT11 fallback compatibility.
   • Nostr identity (NIP-05).
   • Zap support + DM notifications.
