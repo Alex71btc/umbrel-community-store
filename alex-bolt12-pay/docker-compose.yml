@@ -8,7 +8,7 @@ services:
       PROXY_AUTH_ADD: "false"
 
   web:
-    image: alex71btc/bolt12-pay:0.2.61
+    image: alex71btc/bolt12-pay:0.2.63
     restart: unless-stopped
     depends_on:
       - lndk

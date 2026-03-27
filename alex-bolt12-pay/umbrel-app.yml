@@ -4,7 +4,7 @@ name: BOLT12 Pay
 icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/icon_v2.png
 tagline: First self-hosted BIP353 Lightning Address & BOLT12 Offer app for LND nodes
 category: finance
-version: "0.2.62"
+version: "0.2.63"
 port: 8091
 description: >-
   ⚡ BOLT12 Pay is the first self-hosted app bringing BIP353 Lightning Addresses
@@ -46,10 +46,10 @@ submission: https://github.com/Alex71btc/umbrel-community-store
 repo: https://github.com/Alex71btc/lndk-pay
 support: https://github.com/Alex71btc/lndk-pay/issues
 gallery:
-  - screenshots/1.png
-  - screenshots/2.png
-  - screenshots/3.png
-  - screenshots/4.png
+  - https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/screenshots/1.png
+  - https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/screenshots/2.png
+  - https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/screenshots/3.png
+  - https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/screenshots/4.png
 releaseNotes: |
   Major UI update with full bilingual support (EN/DE) and improved UX.
 
