@@ -46,11 +46,10 @@ submission: https://github.com/Alex71btc/umbrel-community-store
 repo: https://github.com/Alex71btc/lndk-pay
 support: https://github.com/Alex71btc/lndk-pay/issues
 gallery:
-  - bolt12-pay1.png
-  - bolt12-pay2.png
-  - bolt12-pay3.png
-  - bolt12-pay4.png
-
+  - screenshots/1.png
+  - screenshots/2.png
+  - screenshots/3.png
+  - screenshots/4.png
 releaseNotes: |
   Major UI update with full bilingual support (EN/DE) and improved UX.
 
