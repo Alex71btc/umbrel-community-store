@@ -9,15 +9,11 @@ port: 8091
 description: >-
   Self-hosted Lightning payment and identity server with native BOLT12 support.
 
-
   Create and receive payments using next-generation BOLT12 offers, Lightning Address (BIP353), and LNURL — all from your own node.
-
 
   Includes Nostr identity (NIP-05), Zap support, and real-time notifications, with seamless fallback between BOLT12, LNURL, and BOLT11 for maximum compatibility.
 
-
   Designed for sovereign Bitcoin users who want full control over their Lightning infrastructure, identities, and payments.
-
 
 
   ## Features
