@@ -22,7 +22,7 @@ description: >-
   their Lightning infrastructure, identities, and payments.
 
 
- ## Features:
+ Features:
   •  BOLT12 Offers (create & pay via LNDK).
   • Lightning Address (BIP353 + LNURL server).
   • BOLT11 fallback compatibility.
