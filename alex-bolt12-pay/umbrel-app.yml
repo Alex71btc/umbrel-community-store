@@ -6,7 +6,7 @@ tagline: First self-hosted BIP353 Lightning Address & BOLT12 Offer app for LND n
 category: finance
 version: "0.2.65"
 port: 8091
-description: >
+description: >-
   Self-hosted Lightning payment and identity server with native BOLT12 support.
 
   Create and receive payments using next-generation BOLT12 offers, Lightning Address (BIP353), and LNURL — all from your own node.
@@ -15,20 +15,21 @@ description: >
 
   Designed for sovereign Bitcoin users who want full control over their Lightning infrastructure, identities, and payments.
 
-  Features:
 
-  - BOLT12 Offers (create & pay via LNDK)
-  - Lightning Address (BIP353 + LNURL server)
-  - BOLT11 fallback compatibility
-  - Nostr identity (NIP-05)
-  - Zap support + DM notifications
-  - Multi-relay support
-  - Cloudflare DNS integration (optional)
-  - Fully self-hosted on Umbrel
-  - Clean, mobile-friendly UI
+  ## Features
+    - **BOLT12 Offers** – Create and pay offers via LNDK
+    - **Lightning Address** – BIP353 + LNURL server
+    - **BOLT11 Fallback** – Maximum wallet compatibility
+    - **Nostr Identity** – NIP-05 support
+    - **Zaps & Notifications** – Zap support + DM notifications
+    - **Multi-Relay Support** – Works across multiple relays
+    - **Cloudflare DNS** – Optional automatic publishing
+    - **Self-Hosted** – Full control on Umbrel
+    - **Mobile-Friendly UI** – Clean and optimized UX
 
-  Note:
-  BOLT12 support on LND is still evolving and considered experimental.
+
+  ## Notes
+    - BOLT12 support on LND is still evolving and considered experimental.
 developer: Alex71btc
 website: https://github.com/Alex71btc/lndk-pay
 submitter: Alex71btc
