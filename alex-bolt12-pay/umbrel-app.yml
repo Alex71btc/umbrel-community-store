@@ -7,38 +7,30 @@ category: finance
 version: "0.2.65"
 port: 8091
 description: >-
-  ⚡ BOLT12 Pay is the first self-hosted app bringing BIP353 Lightning Addresses
-  and native BOLT12 Offer creation and payments to LND nodes.
+  Self-hosted Lightning payment and identity server with native BOLT12 support.
 
-  If you own a domain, BOLT12 Pay turns it into a powerful Lightning Address
-  and Nostr Zap server with full control over identities, payments, and notifications.
+  Create and receive payments using next-generation BOLT12 offers,
+  Lightning Address (BIP353), and LNURL — all from your own node.
 
-  🔥 Features
+  Includes Nostr identity (NIP-05), Zap support, and real-time notifications,
+  with seamless fallback between BOLT12, LNURL, and BOLT11 for maximum compatibility.
 
-  ⚡ BIP353 Lightning Addresses
-  - Publish human-readable Lightning aliases for your domain
-  - Cloudflare-powered automatic DNS publishing
-  - No third-party services required
+  Designed for sovereign Bitcoin users who want full control over
+  their Lightning infrastructure, identities, and payments.
 
-  ⚡ BOLT12 Offers (experimental)
-  - Create and pay BOLT12 Offers on LND via LNDK
-  - One of the first real-world Offer implementations for LND
+  Features:
+  • BOLT12 Offers (create & pay via LNDK)
+  • Lightning Address (BIP353 + LNURL server)
+  • BOLT11 fallback compatibility
+  • Nostr identity (NIP-05)
+  • Zap support + DM notifications
+  • Multi-relay support
+  • Cloudflare DNS integration (optional)
+  • Fully self-hosted on Umbrel
+  • Clean, mobile-friendly UI
 
-  ⚡ Lightning Address / LNURL
-  - Fully self-hosted LNURL server
-  - Compatible with all standard wallets
-
-  ⚡ Nostr Integration
-  - NIP-05 support
-  - Zap receiving + publishing
-  - Encrypted DM notifications
-  - Multi-relay support
-
-  ⚙️ Self-hosted by design
-  - Full control over keys, relays, and identities
-
-  🚨 Experimental
-  - BOLT12 support on LND is cutting-edge and evolving
+  Note:
+  BOLT12 support on LND is still evolving and considered experimental.
 developer: Alex71btc
 website: https://github.com/Alex71btc/lndk-pay
 submitter: Alex71btc
