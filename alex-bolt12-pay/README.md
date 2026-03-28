@@ -50,6 +50,9 @@ BOLT12 Pay combines:
 
 …into a single self-hosted stack for Lightning-native identity and payments.
 
+## License
+
+MIT License
 
 Screenshots
 
