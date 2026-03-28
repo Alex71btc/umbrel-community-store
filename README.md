@@ -2,14 +2,26 @@
 
 A community Umbrel App Store focused on self-hosted Bitcoin, Lightning, and sovereign infrastructure.
 
-## Included apps
+## Included Apps
 
-- **BOLT12 Pay**  
-  Self-hosted Lightning payment and identity server with:
-  - BOLT12 Offers
-  - Lightning Address / LNURL
-  - BOLT11 fallback
-  - Nostr identity support
+### BOLT12 Pay
+Self-hosted Lightning payment and identity server with:
+
+- BOLT12 Offers
+- Lightning Address (BIP353 + LNURL)
+- BOLT11 fallback
+- Nostr identity support
+- Umbrel-native deployment
+
+BOLT12 Pay is designed for sovereign Bitcoin users who want full control over payments, addresses, and identity.
+
+
+## Add This Store to Umbrel
+
+Use this repository URL in Umbrel to add the store:
+
+`https://github.com/Alex71btc/umbrel-community-store`
+
 
 - **alex-mempool**  
   Self-hosted mempool explorer for Umbrel.
@@ -27,3 +39,7 @@ This store focuses on:
 - Lightning infrastructure
 - Nostr-compatible apps
 - privacy-respecting sovereign services
+
+## Support
+
+For app-specific issues, please open an issue in the corresponding app repository.
