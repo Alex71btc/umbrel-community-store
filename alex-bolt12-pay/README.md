@@ -56,14 +56,14 @@ Screenshots
 ![Home](./screenshots/1.png)
 
 
-![Payment Flow](./umbrel-community-store/alex-bolt12-pay/screenshots/2.png)
+![Payment Flow](./screenshots/2.png)
 
 
-![Lightning Address](./umbrel-community-store/alex-bolt12-pay/screenshots/3.png)
+![Lightning Address](./screenshots/3.png)
 
 
-![Admin](./umbrel-community-store/alex-bolt12-pay/screenshots/4.png)
+![Admin](./screenshots/4.png)
 
 
-![Identity](./umbrel-community-store/alex-bolt12-pay/screenshots/5.png)
+![Identity](./screenshots/5.png)
 
