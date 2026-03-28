@@ -53,7 +53,7 @@ BOLT12 Pay combines:
 
 Screenshots
 
-![Home](./umbrel-community-store/alex-bolt12-pay/screenshots/1.png)
+![Home](./screenshots/1.png)
 
 
 ![Payment Flow](./umbrel-community-store/alex-bolt12-pay/screenshots/2.png)
