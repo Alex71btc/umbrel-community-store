@@ -24,9 +24,9 @@ description: >-
     - Lightning Address – BIP353 + LNURL server
     - BOLT11 Fallback – Maximum wallet compatibility
     - Nostr Identity – NIP-05 support
-    - Zaps & Notifications – Zap support + DM notifications
+    - Zaps & Notifications – LN addresses with Zap support + DM notifications
+    - Nostr Wallet Connect (NWC)- Zap wallet for Nostr Clients like Amethyst
     - Multi-Relay Support – Works across multiple relays
-    - Nostr Wallet Connect (NWC) Zap wallet - connect other apps or Nostr Clients like Amethyst
     - Cloudflare DNS – Optional automatic publishing
     - Self-Hosted – Full control on Umbrel
     - Mobile-Friendly UI – Clean and optimized UX
