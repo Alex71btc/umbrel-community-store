@@ -26,7 +26,7 @@ description: >-
     - Nostr Identity – NIP-05 support
     - Zaps & Notifications – Zap support + DM notifications
     - Multi-Relay Support – Works across multiple relays
-    - Nostr Wallet Connect (NWC) Zap wallet, connect other apps or Nostr Clients like Amethyst, Primal, Damus
+    - Nostr Wallet Connect (NWC) Zap wallet - connect other apps or Nostr Clients like Amethyst
     - Cloudflare DNS – Optional automatic publishing
     - Self-Hosted – Full control on Umbrel
     - Mobile-Friendly UI – Clean and optimized UX
