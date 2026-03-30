@@ -4,7 +4,7 @@ name: BOLT12 Pay
 icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/icon_v2.png
 tagline: First self-hosted BIP353 Lightning Address & BOLT12 Offer app for LND nodes
 category: finance
-version: 0.2.69
+version: 0.2.70
 port: 8091
 description: >-
   Self-hosted Lightning payment and identity server with native BOLT12 support.
@@ -46,14 +46,14 @@ gallery:
   - https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/screenshots/4.png
   - https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/screenshots/5.png
 releaseNotes: |
-  Major update: Nostr Wallet Connect (NWC) control and reliability improvements.
+  Improves Nostr Wallet Connect reliability and mobile usability.
 
-  • Per-connection payment limits
-  • Daily, weekly, and monthly NWC budgets
-  • Automatic budget reset per period
-  • Remaining budget visible in UI
-  • Improved language switching without reload
-  • Fixed stale landing page data (no more hard reload needed)
+  • Primal-compatible virtual NWC balance for budget-based zap wallets
+  • NWC budget usage now decreases correctly during payments
+  • Improved mobile clipboard fallback for Pay, Public, and Alias pages
+  • Admin and NWC runtime cleanup for better stability
+  • Removed runtime config from the Docker build context for safer secret handling
+
 dependencies:
   - lightning
 path: ""
