@@ -4,7 +4,7 @@ name: BOLT12 Pay
 icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/icon_v2.png
 tagline: First self-hosted BIP353 Lightning Address & BOLT12 Offer app for LND nodes
 category: finance
-version: "0.2.66"
+version: 0.2.69
 port: 8091
 description: >-
   Self-hosted Lightning payment and identity server with native BOLT12 support.
@@ -45,20 +45,14 @@ gallery:
   - https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/screenshots/4.png
   - https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/screenshots/5.png
 releaseNotes: |
-  Major UX and onboarding upgrade with bilingual UI and improved reliability.
+  Major update: Nostr Wallet Connect (NWC) control and reliability improvements.
 
-  • Full English + German interface with live language switching
-  • New Setup flow for initial configuration (BOLT12 + LNURL + DNS)
-  • Improved remote access model (separates admin UI from public payment endpoints)
-  • Fixed QR code initialization and refresh issues
-  • Improved payment summaries for BOLT12, BOLT11 and LNURL
-  • Language-aware timestamps in Offer History (auto-switch)
-  • Cleaner Nostr Identity and Cloudflare BIP353 configuration UI
-  • Unified translation system (removed hardcoded strings)
-  • Unified toast system across all actions
-  • Tap-to-copy for QR codes, strings, and buttons
-  • Fixed button states during async actions (Create Offer, Save Identity)
-  • General stability improvements and bug fixes
+  • Per-connection payment limits
+  • Daily, weekly, and monthly NWC budgets
+  • Automatic budget reset per period
+  • Remaining budget visible in UI
+  • Improved language switching without reload
+  • Fixed stale landing page data (no more hard reload needed)
 dependencies:
   - lightning
 path: ""
