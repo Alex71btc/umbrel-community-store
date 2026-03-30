@@ -26,6 +26,7 @@ description: >-
     - Nostr Identity – NIP-05 support
     - Zaps & Notifications – Zap support + DM notifications
     - Multi-Relay Support – Works across multiple relays
+    - NWC Connections to connect other apps and Nostr Clients like Amethyst and Damus 
     - Cloudflare DNS – Optional automatic publishing
     - Self-Hosted – Full control on Umbrel
     - Mobile-Friendly UI – Clean and optimized UX
