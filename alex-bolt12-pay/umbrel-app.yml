@@ -30,9 +30,10 @@ description: >-
     - Cloudflare DNS – Optional automatic publishing
     - Self-Hosted – Full control on Umbrel
     - Mobile-Friendly UI – Clean and optimized UX
-
   NOTE
     - BOLT12 support on LND is still evolving and considered experimental.
+    - Lightning Address (BIP353), LNURL aliases, and Nostr identity features require your own domain and proper DNS setup.
+    - BOLT12 offers can still be created and used without a custom domain.
 developer: Alex71btc
 website: https://github.com/Alex71btc/lndk-pay
 submitter: Alex71btc
