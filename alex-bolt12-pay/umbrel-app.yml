@@ -25,7 +25,7 @@ description: >-
     - BOLT11 Fallback – Maximum wallet compatibility
     - Nostr Identity – NIP-05 support
     - Zaps & Notifications – LN addresses with Zap support + DM notifications
-    - Nostr Wallet Connect (NWC)- Zap wallet for Nostr Clients like Amethyst
+    - Nostr Wallet Connect (NWC) - Zap wallet for Nostr Clients like Amethyst
     - Multi-Relay Support – Works across multiple relays
     - Cloudflare DNS – Optional automatic publishing
     - Self-Hosted – Full control on Umbrel
