@@ -48,12 +48,17 @@ gallery:
   - https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/screenshots/4.png
   - https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/screenshots/5.png
 releaseNotes: |
-  Fixes critical BOLT12 payment routing regressions.
+  Fixes critical BOLT12 payment routing regressions- cleanup and stability improvements.
 
   • Pins LNDK to a known working build
   • Fixes failed BOLT12 payments to Phoenix and external wallets
   • Restores reliable BIP353 / Offer payment flow
   • Resolves issues caused by a broken newer LNDK stable build
+  • Removed duplicate LNURL helper functions
+  • Removed duplicate create-offer implementation
+  • Cleaned up legacy backup files in repository
+  • Improved maintainability of LNURL and offer handling
+  • Prepares foundation for upcoming features (NWC, Nostr, UX improvements)
 dependencies:
   - lightning
 path: ""
