@@ -4,7 +4,7 @@ name: BOLT12 Pay
 icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/icon_v2.png
 tagline: First self-hosted BIP353 Lightning Address & BOLT12 Offer app for LND nodes
 category: finance
-version: 0.2.72
+version: 0.2.73
 port: 8091
 description: >-
   Self-hosted Lightning payment and identity server with native BOLT12 support.
@@ -48,15 +48,11 @@ gallery:
   - https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/screenshots/4.png
   - https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/screenshots/5.png
 releaseNotes: |
-  Improves UI stability and internationalization across the app.
+  Fixes critical BOLT12 payment routing issue.
 
-  • Fixes inconsistent language switching (DE/EN) in multiple UI sections
-  • Eliminates flickering and race conditions in alias list rendering
-  • Restores and stabilizes toast notification system with unified translation keys
-  • Fixes LNURL and Alias Manager texts not updating correctly without page reload
-  • Improves overall responsiveness and consistency of the Pay interface
-
-  This release significantly improves the user experience, especially on mobile and during interactive use.
+  • Fixes failed payments >5 sats to Phoenix / external wallets
+  • Pins LNDK to known working build
+  • Resolves inconsistent blinded path behavior
 dependencies:
   - lightning
 path: ""
