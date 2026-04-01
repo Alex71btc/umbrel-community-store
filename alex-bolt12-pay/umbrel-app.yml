@@ -48,11 +48,12 @@ gallery:
   - https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/screenshots/4.png
   - https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/screenshots/5.png
 releaseNotes: |
-  Fixes critical BOLT12 payment routing issue.
+  Fixes critical BOLT12 payment routing regressions.
 
-  • Fixes failed payments >5 sats to Phoenix / external wallets
-  • Pins LNDK to known working build
-  • Resolves inconsistent blinded path behavior
+  • Pins LNDK to a known working build
+  • Fixes failed BOLT12 payments to Phoenix and external wallets
+  • Restores reliable BIP353 / Offer payment flow
+  • Resolves issues caused by a broken newer LNDK stable build
 dependencies:
   - lightning
 path: ""
