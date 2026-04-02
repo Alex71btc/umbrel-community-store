@@ -1,3 +1,59 @@
+## Setup Guide
+
+### Step 1 — Install
+
+Install BOLT12 Pay from the Umbrel Community App Store.
+
+---
+
+### Step 2 — Enable BOLT12 (IMPORTANT)
+
+Open:
+
+```
+/home/umbrel/umbrel/app-data/lightning/data/lnd/lnd.conf
+```
+
+Add:
+
+```
+[protocol]
+custom-message=513
+custom-nodeann=39
+custom-init=39
+```
+
+Restart your Lightning node.
+
+---
+
+### Step 3 — Configure App
+
+Open the app and set:
+
+* Public BOLT12 Address
+* Lightning Address (LNURL)
+* Domain / DNS
+
+---
+
+### Step 4 — Ready
+
+You can now receive:
+
+* BOLT12 payments
+* Lightning Address payments
+* LNURL payments
+
+All fully self-hosted.
+
+---
+
+### Optional
+
+* Enable Cloudflare DNS automation
+* Add Nostr identity for Zaps
+
 ⚡ BOLT12 Pay
 
 The first self-hosted app bringing BIP353 Lightning Addresses and native BOLT12 Offer creation and payments to LND nodes, as well as Bolt 11 Lightning Addresses, and Nostr Zaps for LND nodes.
