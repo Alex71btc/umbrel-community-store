@@ -7,74 +7,74 @@ category: finance
 version: 0.2.76
 port: 8091
 description: >
-Self-hosted Lightning payments + identity for your own node.
+  Self-hosted Lightning payments + identity for your own node.
 
-Create and receive payments using:
-- BOLT12 Offers (next-gen Lightning)
-- Lightning Address (BIP353)
-- LNURL (fallback)
-- BOLT11 invoices
+  Create and receive payments using:
+  - BOLT12 Offers (next-gen Lightning)
+  - Lightning Address (BIP353)
+  - LNURL (fallback)
+  - BOLT11 invoices
 
-No custodians. No external services. Full control.
+  No custodians. No external services. Full control.
 
----
+  ---
 
-WHAT YOU CAN DO
+  WHAT YOU CAN DO
 
-- Create reusable BOLT12 payment requests
-- Run your own Lightning Address server
-- Receive payments via LNURL and BOLT11
-- Use your own domain for payments
-- Add Nostr identity (NIP-05) and receive Zaps
-- Optional Cloudflare DNS automation
+  - Create reusable BOLT12 payment requests
+  - Run your own Lightning Address server
+  - Receive payments via LNURL and BOLT11
+  - Use your own domain for payments
+  - Add Nostr identity (NIP-05) and receive Zaps
+  - Optional Cloudflare DNS automation
 
----
+  ---
 
-WHY THIS APP
+  WHY THIS APP
 
-Most Lightning Address services are custodial.
+  Most Lightning Address services are custodial.
 
-BOLT12 Pay gives you:
-- full ownership of your node
-- full control over your domain
-- a future-proof Lightning setup
+  BOLT12 Pay gives you:
+  - full ownership of your node
+  - full control over your domain
+  - a future-proof Lightning setup
 
----
+  ---
 
-IMPORTANT (Umbrel)
+  IMPORTANT (Umbrel)
 
-BOLT12 requires onion messaging in LND.
+  BOLT12 requires onion messaging in LND.
 
-Connect via SSH:
+  Connect via SSH:
 
-    ssh umbrel@umbrel.local
+      ssh umbrel@umbrel.local
 
-Open the config:
+  Open the config:
 
-    nano ~/umbrel/app-data/lightning/data/lnd/lnd.conf
+      nano ~/umbrel/app-data/lightning/data/lnd/lnd.conf
 
-Add at the end:
+  Add at the end:
 
-    [protocol]
-    custom-message=513
-    custom-nodeann=39
-    custom-init=39
+      [protocol]
+      custom-message=513
+      custom-nodeann=39
+      custom-init=39
 
-Restart Lightning afterwards.
+  Restart Lightning afterwards.
 
-Without this, BOLT12 will not work.
+  Without this, BOLT12 will not work.
 
----
+  ---
 
-EXPERIMENTAL NOTICE
+  EXPERIMENTAL NOTICE
 
-- BOLT12 on LND is still evolving
-- Wallet support may vary
-- This app uses cutting-edge Lightning features
+  - BOLT12 on LND is still evolving
+  - Wallet support may vary
+  - This app uses cutting-edge Lightning features
 
----
+  ---
 
-Made for sovereign Bitcoin users.
+  Made for sovereign Bitcoin users.
 developer: Alex71btc
 website: https://github.com/Alex71btc/lndk-pay
 submitter: Alex71btc
