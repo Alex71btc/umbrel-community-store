@@ -6,25 +6,26 @@ Install BOLT12 Pay from the Umbrel Community App Store.
 
 ---
 
-### Step 2 — Enable BOLT12 (IMPORTANT)
+```text
+Important for BOLT12 on Umbrel:
+
+Connect via SSH:
+ssh umbrel@umbrel.local
 
 Open:
+nano ~/umbrel/app-data/lightning/data/lnd/lnd.conf
 
-```
-/home/umbrel/umbrel/app-data/lightning/data/lnd/lnd.conf
-```
+Add at the end of the file:
 
-Add:
-
-```
 [protocol]
 custom-message=513
 custom-nodeann=39
 custom-init=39
-```
 
-Restart your Lightning node.
 
+Save the file and restart Lightning.
+
+Without this, BOLT12 offers will not work.
 ---
 
 ### Step 3 — Configure App
