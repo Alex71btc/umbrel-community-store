@@ -6,18 +6,26 @@ tagline: First self-hosted BIP353 Lightning Address & BOLT12 Offer app for LND n
 category: finance
 version: 0.2.74
 port: 8091
-description: >-
-  Self-hosted Lightning payment and identity server with native BOLT12 support.
+description: >
+  Self-hosted Lightning payment and identity server with BOLT12 support.
 
+  Create and receive payments using next-generation BOLT12 offers,
+  Lightning Address, and LNURL — all from your own node.
 
-  Create and receive payments using next-generation BOLT12 offers, Lightning Address (BIP353), and LNURL — all from your own node.
+  Includes Nostr identity (NIP-05 + Zaps), QR-based payments,
+  and seamless fallback between BOLT12, LNURL, and BOLT11.
 
+  ⚠️ IMPORTANT:
+  BOLT12 requires LND with onion messaging enabled.
 
-  Includes Nostr identity (NIP-05), Zap support, and real-time notifications, with seamless fallback between BOLT12, LNURL, and BOLT11 for maximum compatibility.
+  To enable it, open your Umbrel Lightning node config and add:
 
+    [protocol]
+    custom-message=513
+    custom-nodeann=39
+    custom-init=39
 
-  Designed for sovereign Bitcoin users who want full control over their Lightning infrastructure, identities, and payments.
-
+  Then restart your Lightning node.
 
   FEATURES
     - BOLT12 Offers – Create and pay offers via LNDK
