@@ -3,10 +3,10 @@ version: "3.7"
 services:
   app_proxy:
     environment:
-      APP_HOST: alex-bolt12-pay_web_1
+      APP_HOST: bolt12-pay_web_1
       APP_PORT: 8081
-      PROXY_AUTH_ADD: "false"
-
+      PROXY_AUTH_WHITELIST: "*"
+      PROXY_AUTH_BLACKLIST: "/pay,/pay-login,/api/*"
   web:
     image: alex71btc/bolt12-pay:0.2.79
     restart: unless-stopped
