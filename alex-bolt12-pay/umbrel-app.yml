@@ -71,6 +71,8 @@ description: >
   - BOLT12 on LND is still evolving
   - Wallet support may vary
   - This app uses cutting-edge Lightning features
+  - Reliable BOLT12 payments benefit from good outbound liquidity and well-connected peers.
+  - Direct channels to major routing hubs such as ACINQ can significantly improve Phoenix offer payments.
 
   ---
 
