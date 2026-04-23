@@ -5,7 +5,7 @@ icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/
 tagline: First self-hosted BIP353 Lightning Address & BOLT12 Offer app for LND nodes
 category: finance
 version: 0.2.80
-port: 8091
+port: 8367
 description: >
   Self-hosted Lightning payments + identity for your own node.
 
