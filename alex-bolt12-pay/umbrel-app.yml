@@ -90,9 +90,10 @@ gallery:
   - https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/screenshots/4.png
   - https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/screenshots/5.png
 releaseNotes: |
-  Fixes the default BOLT12 address shown on the Pay/Admin page so it is loaded
-  from the app setup configuration. Updates the Docker image to a fresh
-  multi-platform build for amd64 and arm64.
+  Bugfix release.
+
+  - Fix default BOLT12 address on Pay/Admin page
+  - Update Docker image for amd64 and arm64
 dependencies:
   - lightning
 path: ""
