@@ -4,7 +4,7 @@ name: BOLT12 Pay
 icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/icon_v2.png
 tagline: First self-hosted BIP353 Lightning Address & BOLT12 Offer app for LND nodes
 category: finance
-version: 0.2.83
+version: 0.2.84
 port: 8091
 description: >
   Self-hosted Lightning payments + identity for your own node.
@@ -56,9 +56,9 @@ description: >
   Add at the end:
 
       [protocol]
-      custom-message=513
-      custom-nodeann=39
-      custom-init=39
+      protocol.custom-message=513
+      protocol.custom-nodeann=39
+      protocol.custom-init=39
 
   Restart Lightning afterwards.
 
