@@ -4,7 +4,7 @@ name: BOLT12 Pay
 icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/icon_v2.png
 tagline: First self-hosted BIP353 Lightning Address & BOLT12 Offer app for LND nodes
 category: finance
-version: 0.2.89
+version: 0.2.92
 port: 8091
 description: >
   Self-hosted Lightning payments + identity for your own node.
@@ -90,20 +90,22 @@ gallery:
   - https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/screenshots/4.png
   - https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/screenshots/5.png
 releaseNotes: |
-  Critical documentation fix for Umbrel LND configuration.
+  UX and runtime improvement release.
 
-  Corrects the required BOLT12/LND protocol configuration keys to use the full
-  protocol.* format expected by Umbrel LND.
+  - Improved browser language detection
+  - Persistent language selection across sessions
+  - Fixed translation/runtime issues in Pay UI
+  - Improved English user experience
+  - Updated multi-arch Docker images (amd64 + arm64)
 
-  Users who previously added the old config format should replace it with:
+  Also includes the corrected Umbrel LND BOLT12 configuration:
 
-  [protocol]
-  protocol.custom-message=513
-  protocol.custom-nodeann=39
-  protocol.custom-init=39  Bugfix release.
+      [protocol]
+      protocol.custom-message=513
+      protocol.custom-nodeann=39
+      protocol.custom-init=39
 
-  - Fix default BOLT12 address on Pay/Admin page
-  - Update Docker image for amd64 and arm64
+  Lightning must be restarted afterwards for BOLT12 to work correctly.
 dependencies:
   - lightning
 path: ""
