@@ -4,7 +4,7 @@ name: BOLT12 Pay
 icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/icon_v2.png
 tagline: First self-hosted BIP353 Lightning Address & BOLT12 Offer app for LND nodes
 category: finance
-version: 0.2.92
+version: 0.2.93
 port: 8091
 description: >
   Self-hosted Lightning payments + identity for your own node.
@@ -45,22 +45,18 @@ description: >
 
   BOLT12 requires onion messaging in LND.
 
-  Connect via SSH:
+  Open Umbrel → Files and navigate to:
 
-      ssh umbrel@umbrel.local
+      Apps → lightning → data → lnd → lnd.conf
 
-  Open the config:
-
-      nano ~/umbrel/app-data/lightning/data/lnd/lnd.conf
-
-  Add at the end:
+  Open the file and add at the end:
 
       [protocol]
       protocol.custom-message=513
       protocol.custom-nodeann=39
       protocol.custom-init=39
 
-  Restart Lightning afterwards.
+  Save and restart Lightning afterwards.
 
   Without this, BOLT12 will not work.
 
@@ -89,23 +85,17 @@ gallery:
   - https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/screenshots/3.png
   - https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/screenshots/4.png
   - https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/screenshots/5.png
-releaseNotes: |
-  UX and runtime improvement release.
 
-  - Improved browser language detection
-  - Persistent language selection across sessions
-  - Fixed translation/runtime issues in Pay UI
-  - Improved English user experience
+releaseNotes: |
+  Improved UX and internationalization handling.
+
+  - Fixed browser language detection consistency
+  - Fixed English runtime fallback behavior
+  - Improved language persistence across sessions
+  - Fixed mixed-language UI states after navigation
+  - Improved setup/app/pay translation consistency
   - Updated multi-arch Docker images (amd64 + arm64)
 
-  Also includes the corrected Umbrel LND BOLT12 configuration:
-
-      [protocol]
-      protocol.custom-message=513
-      protocol.custom-nodeann=39
-      protocol.custom-init=39
-
-  Lightning must be restarted afterwards for BOLT12 to work correctly.
 dependencies:
   - lightning
 path: ""
