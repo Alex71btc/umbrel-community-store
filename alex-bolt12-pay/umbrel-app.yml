@@ -87,7 +87,7 @@ gallery:
   - https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/screenshots/5.png
 
 releaseNotes: |
-Security hardening and alias page improvements.
+  Security hardening and alias page improvements.
 
   - Added server-side authentication checks for setup/configuration endpoints
   - Added authentication protection for alias management endpoints
@@ -96,7 +96,6 @@ Security hardening and alias page improvements.
   - Added legacy alias URL redirects for backward compatibility
   - Verified authentication enforcement on public and local endpoints
   - Updated multi-arch Docker images (amd64 + arm64)
-
 dependencies:
   - lightning
 path: ""
