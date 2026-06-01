@@ -89,13 +89,13 @@ gallery:
 releaseNotes: |
 Security hardening and alias page improvements.
 
-* Added server-side authentication checks for setup/configuration endpoints
-* Added authentication protection for alias management endpoints
-* Added authentication protection for Cloudflare/BIP353 management
-* Improved public alias page routing (/alias/<name>)
-* Added legacy alias URL redirects for backward compatibility
-* Verified authentication enforcement on public and local endpoints
-* Updated multi-arch Docker images (amd64 + arm64)
+  - Added server-side authentication checks for setup/configuration endpoints
+  - Added authentication protection for alias management endpoints
+  - Added authentication protection for Cloudflare/BIP353 management
+  - Improved public alias page routing (/alias/<name>)
+  - Added legacy alias URL redirects for backward compatibility
+  - Verified authentication enforcement on public and local endpoints
+  - Updated multi-arch Docker images (amd64 + arm64)
 
 dependencies:
   - lightning
