@@ -4,7 +4,7 @@ name: BOLT12 Pay
 icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/icon_v2.png
 tagline: First self-hosted BIP353 Lightning Address & BOLT12 Offer app for LND nodes
 category: finance
-version: 0.2.96
+version: 0.2.98
 port: 8091
 description: >
   Self-hosted Lightning payments + identity for your own node.
@@ -87,15 +87,17 @@ gallery:
   - https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/screenshots/5.png
 
 releaseNotes: |
-  Security hardening and alias page improvements.
+  Security hardening and authentication improvements.
 
-  - Added server-side authentication checks for setup/configuration endpoints
-  - Added authentication protection for alias management endpoints
-  - Added authentication protection for Cloudflare/BIP353 management
-  - Improved public alias page routing (/alias/<name>)
-  - Added legacy alias URL redirects for backward compatibility
-  - Verified authentication enforcement on public and local endpoints
+  - Protected setup/configuration endpoints
+  - Protected alias management endpoints
+  - Protected Cloudflare DNS management endpoints
+  - Protected Nostr and NWC admin APIs
+  - Setup wizard now gracefully handles blocked config access
+  - Public payment flows remain functional
+  - Improved alias page routing and compatibility
   - Updated multi-arch Docker images (amd64 + arm64)
+
 dependencies:
   - lightning
 path: ""
