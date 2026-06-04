@@ -4,7 +4,7 @@ name: BOLT12 Pay
 icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/icon_v2.png
 tagline: First self-hosted BIP353 Lightning Address & BOLT12 Offer app for LND nodes
 category: bitcoin
-version: 0.2.98
+version: 0.2.99
 port: 8091
 description: >
   Self-hosted Lightning payments + identity for your own node.
@@ -96,8 +96,7 @@ releaseNotes: |
   - Setup wizard now gracefully handles blocked config access
   - Public payment flows remain functional
   - Improved alias page routing and compatibility
-  - Updated multi-arch Docker images (amd64 + arm64)
-
+  - Simplified StartOS Onion Message configuration
 dependencies:
   - lightning
 path: ""
