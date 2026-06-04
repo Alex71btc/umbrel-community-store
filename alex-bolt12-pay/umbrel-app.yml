@@ -3,7 +3,7 @@ id: alex-bolt12-pay
 name: BOLT12 Pay
 icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/icon_v2.png
 tagline: First self-hosted BIP353 Lightning Address & BOLT12 Offer app for LND nodes
-category: finance
+category: bitcoin
 version: 0.2.98
 port: 8091
 description: >
