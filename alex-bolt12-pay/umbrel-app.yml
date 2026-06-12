@@ -4,7 +4,7 @@ name: BOLT12 Pay
 icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/icon_v2.png
 tagline: First self-hosted BIP353 Lightning Address & BOLT12 Offer app for LND nodes
 category: bitcoin
-version: 0.2.104
+version: 0.2.105
 port: 8091
 description: >
   Self-hosted Lightning payments + identity for your own node.
@@ -87,13 +87,12 @@ gallery:
   - https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/screenshots/5.png
 
 releaseNotes: |
-  v0.2.104
+  v0.2.105
 
-  - Security hardening for public endpoints
-  - Removed relay.alex71btc.com from default Nostr relays
-  - Automatic migration of legacy default relay settings
-  - Added support for private ws:// relays
-  - Improved self-hosted Nostr relay compatibility
+  - Added support for true amountless BOLT12 offers
+  - Improved compatibility with Ocean Mining payouts
+  - Improved compatibility with Phoenix Wallet
+  - Updated LNDK with amountless offer payment fixes
 
 dependencies:
   - lightning

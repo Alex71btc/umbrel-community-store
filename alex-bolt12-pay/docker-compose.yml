@@ -8,7 +8,7 @@ services:
       PROXY_AUTH_WHITELIST: "*"
       PROXY_AUTH_BLACKLIST: "/api/setup/config"
   web:
-    image: alex71btc/bolt12-pay:0.2.104@sha256:786001792ad4c46e53b22eef744ad99c09d52a9ecd8f4567d54685c062bb66f5
+    image: alex71btc/bolt12-pay:0.2.105@sha256:df6dad5e2674da41e1db97988fe1fb7935cc6726ff4d665d4a6e14126af2eec9
     restart: unless-stopped
     depends_on:
       - lndk
@@ -46,7 +46,7 @@ services:
       - ${UMBREL_ROOT}/app-data/lightning/data/lnd:/lnd:ro
 
   lndk:
-    image: alex71btc/lndk:start9-20260402@sha256:6dbce21542a2f1a333d2ab69e54f93cd31f2b8a465af976f078653171c6f0da8
+    image: alex71btc/lndk:amountless-fix-v2@sha256:dcace5e9c90c4dfe26c85979f373ecebfafdf0a56b494e22fd5abe7fb731987e
     restart: unless-stopped
     entrypoint:
       - /bin/sh
