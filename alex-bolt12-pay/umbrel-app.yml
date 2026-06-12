@@ -6,82 +6,39 @@ tagline: First self-hosted BIP353 Lightning Address & BOLT12 Offer app for LND n
 category: bitcoin
 version: 0.2.105
 port: 8091
-description: >
-  Self-hosted Lightning payments + identity for your own node.
+description: >-
+  BOLT12 Pay is a self-hosted Lightning payments and identity app for LND nodes.
+  It supports BOLT12 Offers, Lightning Address (BIP353), LNURL, and BOLT11 fallback,
+  with optional Nostr identity features such as NIP-05 and Zaps.
 
-  Create and receive payments using:
-  - BOLT12 Offers (next-gen Lightning)
-  - Lightning Address (BIP353)
-  - LNURL (fallback)
-  - BOLT11 invoices
 
-  No custodians. No external services. Full control.
+  This app currently depends on a custom LND build with BOLT12-related custom
+  message support enabled.
 
-  ---
 
-  WHAT YOU CAN DO
+  In your LND configuration, add:
 
-  - Create reusable BOLT12 payment requests
-  - Run your own Lightning Address server
-  - Receive payments via LNURL and BOLT11
-  - Use your own domain for payments
-  - Add Nostr identity (NIP-05) and receive Zaps
-  - Optional Cloudflare DNS automation
+    [protocol]
+    protocol.custom-message=513
+    protocol.custom-nodeann=39
+    protocol.custom-init=39
 
-  ---
 
-  WHY THIS APP
-
-  Most Lightning Address services are custodial.
-
-  BOLT12 Pay gives you:
-  - full ownership of your node
-  - full control over your domain
-  - a future-proof Lightning setup
-
-  ---
-
-  IMPORTANT (Umbrel)
-
-  BOLT12 requires onion messaging in LND.
-
-  Open Umbrel → Files and navigate to:
-
-      Apps → lightning → data → lnd → lnd.conf
-
-  Open the file and add at the end:
-
-      [protocol]
-      protocol.custom-message=513
-      protocol.custom-nodeann=39
-      protocol.custom-init=39
-
-  Save and restart Lightning afterwards.
-
-  Without this, BOLT12 will not work.
-
-  ---
+  Restart Lightning afterwards. Without this, BOLT12 functionality will not work.
 
 
   Domain setup guide:
 
 
-
-  https://github.com/Alex71btc/lndk-pay#-domain-configuration-bip353-vs-lnurl
-
+  https://github.com/Alex71btc/lndk-pay/blob/main/README.md#-domain-configuration-bip353-vs-lnurl
 
 
-  EXPERIMENTAL NOTICE
+  BOLT12 support on LND is still evolving, wallet compatibility may vary,
+  and this app uses cutting-edge Lightning features.
 
-  - BOLT12 on LND is still evolving
-  - Wallet support may vary
-  - This app uses cutting-edge Lightning features
-  - Reliable BOLT12 payments benefit from good outbound liquidity and well-connected peers.
-  - Direct channels to major routing hubs such as ACINQ can significantly improve Phoenix offer payments.
-
-  ---
 
   Made for sovereign Bitcoin users.
+
 developer: Alex71btc
 website: https://github.com/Alex71btc
 submitter: Alex71btc
