@@ -61,6 +61,9 @@ description: >
   Without this, BOLT12 will not work.
 
   ---
+  Domain setup guide:
+
+  https://github.com/Alex71btc/lndk-pay#-domain-configuration-bip353-vs-lnurl
 
   EXPERIMENTAL NOTICE
 
