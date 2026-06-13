@@ -4,7 +4,7 @@ name: BOLT12 Pay
 icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/icon_v2.png
 tagline: First self-hosted BIP353 Lightning Address & BOLT12 Offer app for LND nodes
 category: bitcoin
-version: 0.2.105
+version: 0.2.105.1
 port: 8091
 description: >-
   BOLT12 Pay is a self-hosted Lightning payments and identity app for LND nodes.
@@ -59,7 +59,7 @@ releaseNotes: |
   - Improved compatibility with Ocean Mining payouts
   - Improved compatibility with Phoenix Wallet
   - Updated LNDK with amountless offer payment fixes
-
+  - Ui text fix offer in history for amountless offers
 dependencies:
   - lightning
 path: ""
