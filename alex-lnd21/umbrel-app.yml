@@ -24,3 +24,5 @@ support: https://github.com/Alex71btc
 
 dependencies:
   - bitcoin-knots
+
+icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-lnd21/lnd.png
