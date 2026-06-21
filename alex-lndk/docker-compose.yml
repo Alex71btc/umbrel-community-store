@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  lndk:
+    image: alex71btc/lndk:native-onion-messages
+    restart: unless-stopped
+
+    command:
+      - "--address=https://alex-lnd21_lnd21_1:10009"
+      - "--cert-path=/lnd/tls.cert"
+      - "--macaroon-path=/lnd/data/chain/bitcoin/mainnet/admin.macaroon"
+      - "--data-dir=/data"
+      - "--grpc-host=0.0.0.0"
+      - "--grpc-port=7000"
+
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+      - ${UMBREL_ROOT}/app-data/alex-lnd21/data:/lnd:ro

@@ -1,0 +1,24 @@
+manifestVersion: 1
+
+id: alex-lndk
+name: LNDK
+tagline: Native Onion Messages & BOLT12 daemon for LND
+
+category: bitcoin
+version: 0.1.0
+
+port: 7000
+
+description: >-
+  LNDK daemon for BOLT12 Offers and Onion Messages.
+
+developer: Alex71btc
+website: https://github.com/Alex71btc
+submitter: Alex71btc
+submission: https://github.com/Alex71btc/umbrel-community-store
+repo: https://github.com/Alex71btc/lndk-pay
+
+dependencies:
+  - alex-lnd21
+
+icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-lnd21/lnd.png
