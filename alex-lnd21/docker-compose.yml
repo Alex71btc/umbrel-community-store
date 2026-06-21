@@ -6,10 +6,9 @@ services:
     restart: unless-stopped
 
     ports:
-      - "10009"
-      - "8080"
-      - "9735"
-
+      - "32853:10009"
+      - "32851:8080"
+      - "32852:9735"
     volumes:
       - ${APP_DATA_DIR}/data:/root/.lnd
 
