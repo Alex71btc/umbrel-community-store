@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
 
     command:
-      - "--address=https://alex-lnd21_lnd21_1:10009"
+      - "--address=https://0.0.0.0:10009"
       - "--cert-path=/lnd/tls.cert"
       - "--macaroon-path=/lnd/data/chain/bitcoin/mainnet/admin.macaroon"
       - "--data-dir=/data"

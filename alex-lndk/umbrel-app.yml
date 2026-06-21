@@ -7,6 +7,7 @@ tagline: Native Onion Messages & BOLT12 daemon for LND
 category: bitcoin
 version: 0.1.0
 
+port: 7002
 
 description: >-
   LNDK daemon for BOLT12 Offers and Onion Messages.
