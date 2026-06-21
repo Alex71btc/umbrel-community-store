@@ -1,0 +1,29 @@
+version: "3.7"
+
+services:
+  lnd21:
+    image: lightninglabs/lnd:v0.21.0-beta
+    restart: unless-stopped
+
+    ports:
+      - "10009"
+      - "8080"
+      - "9735"
+
+    volumes:
+      - ${APP_DATA_DIR}/data:/root/.lnd
+
+    command:
+      - "--bitcoin.mainnet"
+      - "--bitcoin.node=bitcoind"
+
+      - "--bitcoind.rpchost=bitcoin-knots_app_1:9332"
+      - "--bitcoind.rpcuser=umbrel"
+      - "--bitcoind.rpcpass=gc1TdE7cmKLXVJkSEJph-fIPRZh40SjPcQmSjP3g3AE="
+
+      - "--rpclisten=0.0.0.0:10009"
+      - "--restlisten=0.0.0.0:8080"
+      - "--listen=0.0.0.0:9735"
+
+      - "--protocol.option-scid-alias"
+      - "--protocol.zero-conf"

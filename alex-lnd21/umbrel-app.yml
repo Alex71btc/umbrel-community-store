@@ -1,0 +1,26 @@
+manifestVersion: 1
+
+id: alex-lnd21
+name: LND 0.21 Beta
+
+tagline: Experimental LND 0.21 node
+
+version: 0.21.0
+
+category: bitcoin
+
+port: 8080
+
+description: >-
+  Experimental LND 0.21 node running against Umbrel Bitcoin Knots.
+
+developer: Alex71btc
+
+website: https://github.com/Alex71btc
+
+repo: https://github.com/Alex71btc
+
+support: https://github.com/Alex71btc
+
+dependencies:
+  - bitcoin-knots
