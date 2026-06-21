@@ -29,3 +29,4 @@ services:
 
       - "--protocol.option-scid-alias"
       - "--protocol.zero-conf"
+      - '--protocol.onion-msg-relay-all=true'
