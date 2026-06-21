@@ -11,7 +11,7 @@ services:
       - "--macaroon-path=/lnd/data/chain/bitcoin/mainnet/admin.macaroon"
       - "--data-dir=/data"
       - "--grpc-host=0.0.0.0"
-      - "--grpc-port=7001"
+      - "--grpc-port=7000"
 
     volumes:
       - ${APP_DATA_DIR}/data:/data
