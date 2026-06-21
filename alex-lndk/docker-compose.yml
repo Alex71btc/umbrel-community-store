@@ -7,7 +7,7 @@ services:
 
     command:
       - "lndk"
-      - "--address=https://alex-lnd21_lnd21_1:10009"
+      - "--address=https://192.168.188.39:10009"
       - "--cert-path=/lnd/tls.cert"
       - "--macaroon-path=/lnd/data/chain/bitcoin/mainnet/admin.macaroon"
       - "--data-dir=/data"
