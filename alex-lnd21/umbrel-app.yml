@@ -5,7 +5,7 @@ name: LND 0.21 Beta
 
 tagline: Experimental LND 0.21 node
 
-version: 0.21.0
+version: 0.21.0.1
 
 category: bitcoin
 
