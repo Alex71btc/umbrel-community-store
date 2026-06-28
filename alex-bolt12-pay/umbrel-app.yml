@@ -4,7 +4,7 @@ name: BOLT12 Pay
 icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/icon_v2.png
 tagline: First self-hosted BIP353 Lightning Address & BOLT12 Offer app for LND nodes
 category: bitcoin
-version: 0.2.113
+version: 0.2.114
 port: 8091
 description: >-
   BOLT12 Pay is a self-hosted Lightning payments and identity app for LND nodes.
@@ -131,6 +131,7 @@ releaseNotes: |
    - Automatically switches to RouterRPC payment endpoint on LND v0.21 when required
    - Fixes LNURL, Lightning Address, BOLT11 and NWC payment flows on LND v0.21
    - Adds a default routing fee limit for improved compatibility with GetAlby, Wallet of Satoshi and other Lightning Address providers
+   - Fixed LNURL string and QR-code payments failing with "CSRF Validation failed" after login 
 
   Upgrade notes:
 
