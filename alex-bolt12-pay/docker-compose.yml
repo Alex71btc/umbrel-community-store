@@ -8,7 +8,7 @@ services:
       PROXY_AUTH_WHITELIST: "*"
       PROXY_AUTH_BLACKLIST: "/api/setup/config"
   web:
-    image: alex71btc/bolt12-pay:0.2.114@sha256:e971d1457faacfd92f5e9e8c71cf4f3f4fc7e76070a2f2801f3e8ebb3e7a07ab
+    image: alex71btc/bolt12-pay:0.2.116.1@sha256:5e68460c007133e633ff5e7c060124acfefee9ab0e6ac8f826b6fa252fdecbcd
     restart: unless-stopped
     depends_on:
       - lndk
