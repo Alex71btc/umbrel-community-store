@@ -6,76 +6,110 @@ tagline: Self-hosted Lightning payments and identity with BOLT12, BIP353, LNURL,
 category: bitcoin
 version: 0.3.3
 port: 8091
-description: |-
+description: >-
   BOLT12 Pay is a self-hosted Lightning payments and identity app for LND nodes.
-  It supports BOLT12 Offers, BIP353 and LNURL Lightning Addresses, optional BOLT11 fallback invoices, Nostr identities, NIP-05 and Zaps.
+  It supports BOLT12 Offers, Lightning Address (BIP353), LNURL, and optional BOLT11 fallback,
+  with optional Nostr identity features such as NIP-05 and Zaps.
 
-  BEFORE YOU INSTALL
+  ## Before you install
 
-  • Your LND node must be fully synced and have at least one active channel.
-  • LND v0.21 and newer need no manual BOLT12 configuration.
-  • Direct BOLT12 Offers work without a domain.
-  • Lightning Addresses and public payment pages require your own domain.
-  • Cloudflare DNS automation and a Cloudflare Tunnel are optional.
+  Your LND node must be fully synced and have at least one active channel.
+  LND v0.21 and newer support BOLT12 Onion Messaging without manual configuration.
 
-  UMBREL OS 2.0
+  You can create and pay direct BOLT12 Offers without a domain. A domain is needed
+  for BIP353 or LNURL Lightning Addresses and public payment pages. Cloudflare DNS
+  automation is optional.
+
+  ## UmbrelOS 2.0
 
   Open BOLT12 Pay at:
-  https://umbrel.local:8091
+
+  https://umbrel.local:8367
 
   On first launch, the setup screen opens automatically.
 
-  UmbrelOS 2.0 uses local HTTPS. Install Umbrel's Local HTTPS CA on every computer that opens the app. Allow camera access for the address including port 8091 if you want to use the QR scanner.
+  UmbrelOS 2.0 uses local HTTPS. Install Umbrel's Local HTTPS CA on the computer
+  that opens BOLT12 Pay and allow camera access for the address including port 8367.
 
-  For a Cloudflare Tunnel, use https://umbrel.local:8091 as the origin and copy the HTTPS settings from the full guide. Keep TLS verification enabled.
+  For a Cloudflare Tunnel, use https://umbrel.local:8367 as the origin and copy
+  the HTTPS settings shown in the full guide. Keep TLS verification enabled.
 
   Full UmbrelOS 2.0 and Cloudflare guide:
+
   https://github.com/Alex71btc/lndk-pay/blob/main/README.md#-umbrel-setup
 
-  DOMAIN AND PUBLIC ACCESS
+  ## Domain and public access
 
-  Enter your root domain, for example example.com, as the Cloudflare Zone Domain. Do not enter a subdomain such as pay.example.com in that field.
+  When Cloudflare automation asks for the Zone Domain, enter the root domain
+  (for example example.com), not a subdomain such as pay.example.com.
 
-  Use your public Tunnel address as the LNURL Base URL. Wallets need this public address to find you and complete payments. Do not protect the entire public domain with an interactive Cloudflare Access login, because wallets cannot pass it.
+  Enter your public Tunnel address as the LNURL Base URL in BOLT12 Pay. Wallets
+  need that address to find you and complete payments. Cloudflare Access is
+  optional; do not put its login page in front of the entire public domain.
 
   Domain setup guide:
+
   https://github.com/Alex71btc/lndk-pay/blob/main/README.md#-domain-configuration-bip353-vs-lnurl
 
-  NOSTR ZAPS
+  ## Nostr
 
-  Nostr Zaps currently require an LNURL Lightning Address. BIP353 addresses alone cannot receive Nostr Zaps.
+  Nostr Zaps use an LNURL Lightning Address; BIP353 addresses do not currently
+  support the Nostr Zap flow. First create a Lightning Address alias in the
+  Console. Then open Nostr / Identity under /pay, enter that same alias, add the
+  receiving profile's npub and relays, and save it.
 
-  1. Create a Lightning Address alias in the Console, for example zap.
-  2. Open Nostr / Identity under /pay.
-  3. Enter the same alias, the receiving Nostr profile's npub and its relays.
-  4. Save the identity.
-  5. Enter the resulting Lightning Address in your Nostr client's Lightning or Zap address field.
+  Enter the resulting Lightning Address in the Lightning Address or Zap address
+  field of your Nostr client. This makes the address able to receive NIP-57 Zaps.
 
-  To edit an identity later, enter its alias again and then select Load identity.
+  To load or edit the identity later, enter its alias first and then click Load
+  identity. The app uses the alias to find the saved identity.
 
-  ZAP NOTIFICATIONS
+  For encrypted Zap direct-message notifications, use the nsec belonging to the
+  same Nostr profile and click Initialize Zap Notifications. BOLT12 Pay validates
+  and encrypts that nsec. If needed, it also creates the internal app signer
+  automatically in the background.
 
-  To receive encrypted Zap notifications by Nostr direct message, enter the nsec of the same Nostr profile and select Initialize Zap Notifications. BOLT12 Pay encrypts this nsec and creates a separate internal signer key pair automatically.
+  The app signer is a separate Nostr key pair used for Zap receipts. Its private
+  nsec is encrypted and never displayed. The Show app signer
+  button reveals only its public npub. The notification profile's displayed npub
+  must match the identity configured above.
 
-  LND unlocks both encrypted keys automatically after app or node restarts. The private app-signer nsec is never displayed. Show app signer reveals only its public npub. Existing plaintext Nostr keys are encrypted during this update.
+  LND unlocks both encrypted keys automatically after every app or node restart.
+  While LND is still starting, the notification controls simply wait. Existing
+  plaintext Nostr keys are encrypted automatically during this update.
 
-  The saved notification nsec is never loaded back into the input field. To replace it, enter a new nsec and select Save new notification nsec. Regenerate app signer replaces only the internal signer key pair.
+  The saved notification nsec is also never shown or loaded back into the field.
+  To replace it later, enter the new nsec and click Save new notification nsec.
+  The existing app signer remains unchanged.
 
-  Keep every nsec secret. Never share it in support messages, logs or screenshots.
+  If the app signer is faulty or compromised, open Show app signer and use
+  Regenerate app signer. This replaces only the internal signer key pair after a
+  confirmation; the notification nsec is not changed.
 
-  Full Nostr setup guide:
+  Keep every nsec secret. Store it only on a self-hosted node you trust and never
+  share it in support messages, logs, screenshots, or public configuration files.
+
+  Nostr setup guide:
+
   https://github.com/Alex71btc/lndk-pay/blob/main/README.md#-nostr
 
-  OLDER LND VERSIONS
+  ## Legacy LND v0.20.1 beta and older
 
-  Only LND v0.20.1 and older versions need the legacy custom-message settings from the full guide. Remove the complete custom protocol block before upgrading to LND v0.21 or newer. Restart LND before performing the update.
+  Only LND v0.20.1 and older versions need the legacy custom-message settings
+  described in the full guide. Remove that complete custom protocol block before
+  upgrading to LND v0.21 or newer, then restart LND and perform the update.
 
   BOLT12 support is still evolving and wallet compatibility may vary.
 
+
   Support ongoing development by donating to this project:
+
+
   https://geyser.fund/project/bolt12pay
 
+
   Made for sovereign Bitcoin users.
+
 
 developer: Alex71btc
 website: https://github.com/Alex71btc
