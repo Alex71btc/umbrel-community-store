@@ -4,7 +4,7 @@ name: BOLT12 Pay
 icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/icon_v2.png
 tagline: Self-hosted Lightning payments and identity with BOLT12, BIP353, LNURL, and Nostr
 category: bitcoin
-version: 0.3.3.3
+version: 0.3.3.4
 port: 8091
 description: |-
   BOLT12 Pay is a self-hosted Lightning payments and identity app for LND nodes.
@@ -86,15 +86,15 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/5429
 repo: https://github.com/Alex71btc/lndk-pay
 support: https://github.com/Alex71btc/lndk-pay/issues
 releaseNotes: |
-  Nostr notifications:
+  Nostr notification fixes:
 
-  - Uses the internal app signer to send modern NIP-17 private messages when the receiving profile publishes a DM relay list
-  - Falls back to one NIP-04 self-DM when no usable NIP-17 relay list is found
-  - Never sends both notification formats for the same Zap
+  - Correctly calculates the inner NIP-17 message ID when a notification contains Unicode characters such as the Lightning symbol
+  - Counts a relay as successful only after it explicitly accepts the event
+  - Logs the notification event ID and each relay's actual response
 
   Mobile scanner:
 
-  - Keeps the complete QR scan frame inside the visible camera preview on small screens
+  - Replaces the scanner library's clipped guide with an app-controlled frame that always stays inside the visible camera preview
 
 dependencies:
   - lightning
