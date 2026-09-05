@@ -4,7 +4,7 @@ name: BOLT12 Pay
 icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/icon_v2.png
 tagline: Self-hosted Lightning payments and identity with BOLT12, BIP353, LNURL, and Nostr
 category: bitcoin
-version: 0.3.3.2
+version: 0.3.3.3
 port: 8091
 description: |-
   BOLT12 Pay is a self-hosted Lightning payments and identity app for LND nodes.
@@ -55,7 +55,9 @@ description: |-
 
   ZAP NOTIFICATIONS
 
-  To receive encrypted Zap notifications by Nostr direct message, enter the nsec of the same Nostr profile and select Initialize Zap Notifications. BOLT12 Pay encrypts this nsec and creates a separate internal signer key pair automatically. Notification DMs use the relays saved with the Identity; the public Zap receipt uses the relays requested by the paying client.
+  To receive encrypted Zap notifications by Nostr direct message, enter the nsec of the same Nostr profile and select Initialize Zap Notifications. BOLT12 Pay encrypts this nsec and creates a separate internal signer key pair automatically.
+
+  If that profile publishes a NIP-17 DM relay list, the app signer sends one modern NIP-17 notification to the main profile through those DM relays. If no usable list is found, BOLT12 Pay sends one NIP-04 self-DM through the relays saved with the Identity. It never sends both notification formats for the same Zap. The public Zap receipt still uses the relays requested by the paying client.
 
   LND unlocks both encrypted keys automatically after app or node restarts. The private app-signer nsec is never displayed. Show app signer reveals only its public npub. Existing plaintext Nostr keys are encrypted during this update.
 
@@ -84,7 +86,13 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/5429
 repo: https://github.com/Alex71btc/lndk-pay
 support: https://github.com/Alex71btc/lndk-pay/issues
 releaseNotes: |
-  Mobile:
+  Nostr notifications:
+
+  - Uses the internal app signer to send modern NIP-17 private messages when the receiving profile publishes a DM relay list
+  - Falls back to one NIP-04 self-DM when no usable NIP-17 relay list is found
+  - Never sends both notification formats for the same Zap
+
+  Mobile scanner:
 
   - Keeps the complete QR scan frame inside the visible camera preview on small screens
 
