@@ -1,10 +1,11 @@
 manifestVersion: 1
 id: alex-bolt12-pay
 name: BOLT12 Pay
+icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/icon_v2.png
 tagline: Self-hosted Lightning payments and identity with BOLT12, BIP353, LNURL, and Nostr
 category: bitcoin
 version: 0.3.3
-port: 8367
+port: 8091
 description: >-
   BOLT12 Pay is a self-hosted Lightning payments and identity app for LND nodes.
   It supports BOLT12 Offers, Lightning Address (BIP353), LNURL, and optional BOLT11 fallback,
