@@ -6,7 +6,7 @@ name: BOLT12 Pay
 icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/icon_v2.png
 tagline: Self-hosted Lightning payments and identity with BOLT12, BIP353, LNURL, and Nostr
 category: bitcoin
-version: 0.3.8.1
+version: 0.3.9
 port: 8091
 description: |-
   BOLT12 Pay is a self-hosted Lightning payments and identity app for LND nodes.
@@ -88,19 +88,13 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/5429
 repo: https://github.com/Alex71btc/lndk-pay
 support: https://github.com/Alex71btc/lndk-pay/issues
 releaseNotes: |
-  The Community App now follows the official Umbrel proxy policy. Public payment aliases, LNURL and QR endpoints, discovery files, the root document, and required static assets remain reachable; every other route is protected by Umbrel authentication.
+  Adds the signed BOLT12 Pay Android Companion, offered directly on the mobile Android page. It hands BOLT11 invoices, BOLT12 offers, Lightning Addresses and Amethyst BIP321 links to the existing BOLT12 Pay payment screen for review and explicit confirmation.
 
-  Umbrel-managed application storage, the Lightning node data path, the selected Bitcoin network, and container restart behavior now match the official app integration.
+  Lightning Addresses now open the normal amount-entry flow before payment. The Companion is available in German and English, preserves its configured server during normal updates, and includes improved launcher, installer and Android payment-chooser icon sizing.
 
-  Restores reliable NIP-57 Zap receipts and Android push notifications. BOLT12 Pay now advertises the same receipt signer it actually uses; previously standards-validating clients such as Amethyst could reject the receipts, often causing only the first Zap notification to appear.
+  PWA installation guidance has also been improved for Android and iOS. Users of an earlier Companion debug build must uninstall it once before installing the signed release because the signing certificate changed.
 
-  Zaps are now detected and published much faster. New Zap invoices wake the publisher immediately and active payments are checked about once per second instead of waiting for the previous 15-second polling interval.
-
-  Relay publishing now waits for real acceptance acknowledgements, tolerates individual blocked or unavailable relays once another requested relay accepted the receipt, and safely reuses the same signed receipt when a retry is necessary.
-
-  NWC connections sharing a relay now use one shared subscription, duplicate requests are ignored, and reconnects use bounded backoff. Lightning Activity remains responsive while avoiding overlapping LND history scans.
-
-  Existing application data and payment history are preserved. No manual migration is required.
+  Existing BOLT12 Pay application data and payment history are preserved. No manual migration is required.
 
 dependencies:
   - lightning
