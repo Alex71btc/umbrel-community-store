@@ -6,7 +6,7 @@ name: BOLT12 Pay
 icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/icon_v2.png
 tagline: Self-hosted Lightning payments and identity with BOLT12, BIP353, LNURL, and Nostr
 category: bitcoin
-version: 0.3.11
+version: 0.3.12
 port: 8091
 description: |-
   BOLT12 Pay is a self-hosted Lightning payments and identity app for LND nodes.
@@ -88,9 +88,11 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/5429
 repo: https://github.com/Alex71btc/lndk-pay
 support: https://github.com/Alex71btc/lndk-pay/issues
 releaseNotes: |
-  Fixes PWA installation in desktop Chromium and Chrome on Android by serving install icons whose declared sizes match their actual pixel dimensions.
+  Unifies the Pay and Console views as one installable BOLT12 Pay PWA and makes its shared manifest available through the Umbrel app proxy.
 
-  Both the BOLT12 Pay App and Console App can now be installed again after removal. Installation help also explains the limitations of Incognito or Private browsing and Firefox on Linux.
+  This fixes the mixed installation state where Chrome could install the Console but not the Pay view. Pay and Console now remain available inside the same installed app.
+
+  If separate BOLT12 Pay and BOLT12 Console web apps from an earlier test version are still installed, remove both once, reload the Pay page and install the single BOLT12 Pay app again.
 
   Existing BOLT12 Pay application data, payment history and Android Companion configuration are preserved. No manual migration is required.
 
