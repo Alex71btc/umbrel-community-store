@@ -6,7 +6,7 @@ name: BOLT12 Pay
 icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/icon_v2.png
 tagline: Self-hosted Lightning payments and identity with BOLT12, BIP353, LNURL, and Nostr
 category: bitcoin
-version: 0.3.16
+version: 0.3.17
 port: 8091
 description: |-
   BOLT12 Pay is a self-hosted Lightning payments and identity app for LND nodes.
@@ -88,15 +88,19 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/5429
 repo: https://github.com/Alex71btc/lndk-pay
 support: https://github.com/Alex71btc/lndk-pay/issues
 releaseNotes: |
-  Security maintenance release updating Rust TLS and networking dependencies.
+  BOLT12 Pay 0.3.17 improves the Pay interface and mobile payment workflow.
 
-  Updated rustls-webpki to 0.103.16 to incorporate the eMudhra certificate distrust fix. Also updated rustls, h2, tokio and anyhow. Both the LNDK server and CLI have been rebuilt for AMD64 and ARM64.
+  - Submit payments with Enter, preserving validation and duplicate-payment protection.
+  - Access QR scanning, clipboard and saved contacts directly beside the payment field.
+  - Detect BOLT12 offers, BOLT11 invoices, LNURL, Lightning Addresses and node public keys from the clipboard.
+  - Copy payment addresses and offers directly from the Pay field.
+  - Improve mobile notifications, clipboard feedback and saved-contact display.
 
-  No feature changes or manual data migration required. Existing BOLT12 Offers, payment history, Lightning Addresses, Nostr identities, NWC connections and other application data are preserved. The Android Companion remains unchanged.
+  Existing payment history, offers, aliases, Nostr identities and NWC connections are preserved. No manual migration is required.
 
-  Verified with 98 Rust tests, 51 Python tests per architecture, successful incoming and outgoing BOLT12 payments, Phoenix payer notes and NWC balance queries.
+  The LNDK image remains unchanged at 0.3.16. The Android Companion is also unchanged.
 
-  Updating to v0.3.16 is recommended for the included security fixes. Previous releases remain available for emergency rollback.
+  Verified with 59 application tests, 9 PWA/Android handoff tests and successful local manual testing.
 
 dependencies:
   - lightning
