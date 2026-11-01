@@ -6,7 +6,7 @@ name: BOLT12 Pay
 icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/icon_v2.png
 tagline: Self-hosted Lightning payments and identity with BOLT12, BIP353, LNURL, and Nostr
 category: bitcoin
-version: 0.3.18
+version: 0.3.19
 port: 8091
 description: |-
   BOLT12 Pay is a self-hosted Lightning payments and identity app for LND nodes.
@@ -88,25 +88,19 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/5429
 repo: https://github.com/Alex71btc/lndk-pay
 support: https://github.com/Alex71btc/lndk-pay/issues
 releaseNotes: |
-  BOLT12 Pay 0.3.18 — Payment and Login UX Improvements
+  BOLT12 Pay 0.3.19 - Lightning Activity & Mobile UX
 
-  - Submit payments directly with Enter, preserving validation and duplicate-payment protection.
-  - Access QR scanning, clipboard and saved contacts directly beside the Pay field.
-  - Detect BOLT12 offers, BOLT11 invoices, LNURL, Lightning Addresses and node public keys from the clipboard.
-  - Copy Lightning Addresses and BOLT12 offers directly from the Pay field.
-  - Improved saved-contact display and mobile notifications.
+  - Automatically expand and refresh Lightning Activity after successful payments.
+  - Reuse Lightning Addresses, BIP353 addresses, BOLT12 offers, LNURL-pay targets and Keysend pubkeys directly from payment history when available.
+  - Clear amount and payer note before preparing a new payment. No automatic repeat payments.
+  - Exclude single-use BOLT11 invoices and technical identifiers from Quick Repay.
+  - Prevent the Android keyboard from opening unnecessarily after inserting payment targets from contacts, clipboard, links or history.
+  - Dismiss the mobile keyboard after successful payments.
+  - Open Search Contacts without the Android keyboard; search starts when the user taps the field.
+  - Preserve desktop keyboard behavior.
 
-  NEW IN 0.3.18
-
-  - Log in directly with Enter instead of clicking the Login button.
-  - Native HTML form submission for better desktop and mobile compatibility.
-  - Automatic login after selecting saved credentials with the Chrome password manager on Android.
-  - Improved login validation and protection against duplicate requests.
-
-  No manual data migration required. Existing offers, payment history, Lightning Addresses, Nostr identities and NWC connections are preserved.
-
-  The LNDK image remains unchanged at 0.3.16.
-  The Android Companion remains unchanged.
+  No manual migration required. Existing application data is preserved.
+  LNDK and Android Companion remain unchanged.
 
 dependencies:
   - lightning
