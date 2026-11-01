@@ -91,6 +91,7 @@ releaseNotes: |
   BOLT12 Pay 0.3.19 - Lightning Activity & Mobile UX
 
   - Automatically expand and refresh Lightning Activity after successful payments.
+  - Keep the Pay UI responsive during BIP353 invoice timeouts.
   - Reuse Lightning Addresses, BIP353 addresses, BOLT12 offers, LNURL-pay targets and Keysend pubkeys directly from payment history when available.
   - Clear amount and payer note before preparing a new payment. No automatic repeat payments.
   - Exclude single-use BOLT11 invoices and technical identifiers from Quick Repay.
