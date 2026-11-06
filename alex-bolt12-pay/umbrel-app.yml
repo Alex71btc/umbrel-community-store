@@ -6,7 +6,7 @@ name: BOLT12 Pay
 icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/icon_v2.png
 tagline: Self-hosted Lightning payments and identity with BOLT12, BIP353, LNURL, and Nostr
 category: bitcoin
-version: 0.3.20
+version: 0.3.21
 port: 8091
 description: |-
   BOLT12 Pay is a self-hosted Lightning payments and identity app for LND nodes.
@@ -88,16 +88,20 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/5429
 repo: https://github.com/Alex71btc/lndk-pay
 support: https://github.com/Alex71btc/lndk-pay/issues
 releaseNotes: |
-  BOLT12 Pay 0.3.20 - Five-Language Release
+  BOLT12 Pay 0.3.21 - Android Payment Notifications
 
-  - Full interface support for English, German, Spanish, French and Polish.
-  - Localize Pay, Console, Setup, Login, public payment pages and aliases.
-  - Switch languages without losing form inputs, QR content or active context.
-  - Include Android Companion v1.0.1 with native per-app language selection.
-  - Fix the initial Pay QR to display the configured address or active offer.
-  - Improve mobile payment-target editing and touch-to-copy behavior.
-  - Refine language selectors and display the application version on Pay.
-  - Add automated translation catalog and interface validation.
+  - Add optional end-to-end encrypted Lightning payment notifications
+    through UnifiedPush, including support for self-hosted distributors.
+  - Pair, manage and revoke Android Companion devices from the Pay page.
+  - Support optional payment comments for BOLT12 payer notes, Lightning
+    Addresses, Keysend and supported BOLT11 alias-fallback invoices.
+  - Open Lightning Activity directly when tapping an Android notification.
+  - Improve mobile navigation and add dedicated notification SVG icons.
+  - Add public payment-target discovery for supported aliases.
+  - Preserve pending notifications across restarts with persistent
+    delivery retries and duplicate protection.
+  - Deliver notifications without artificial waiting time.
+  - Support Android Companion v1.1.0, distributed separately.
 
   No manual migration required. Existing application data is preserved.
   The LNDK image remains unchanged.
