@@ -7,7 +7,7 @@ services:
       APP_PORT: 8081
       PROXY_AUTH_WHITELIST: "/,/alias,/alias/*,/.well-known,/.well-known/*,/api/lnurl,/api/lnurl/*,/api/qr,/api/qr/*,/icon.svg,/icon.png,/service-worker.js,/public.webmanifest,/pay.webmanifest,/assets,/assets/*"
   web:
-    image: alex71btc/bolt12-pay:0.3.23-rc.2@sha256:8e24c905df6f5f5f51cfd009263703402c62c86387eeb77447f350ac3a049810
+    image: alex71btc/bolt12-pay:0.3.23-rc.3@sha256:2e77ae685759ebe49d7e67f959120334fa19524010090d2262df81196fefceb6
     restart: on-failure
     depends_on:
       - lndk
