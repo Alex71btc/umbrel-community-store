@@ -93,10 +93,10 @@ releaseNotes: |
   - Browser-mediated Companion pairing for Umbrel.
   - Encrypted pairing handoff and confirmation.
   - Push endpoint renewal and device revocation.
-  - Android Companion 1.1.1 included.
+  - Android Companion 1.1.3 included.
   - Direct pairing for StartOS remains supported.
 
-  Pre-release for testing. LNDK remains unchanged.
+  LNDK remains unchanged.
 
 dependencies:
   - lightning
