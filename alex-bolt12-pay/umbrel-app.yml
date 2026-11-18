@@ -6,10 +6,10 @@ name: BOLT12 Pay
 icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/icon_v2.png
 tagline: Self-hosted Lightning payments and identity with BOLT12, BIP353, LNURL, and Nostr
 category: bitcoin
-version: 0.3.24
+version: 0.3.26
 port: 8091
 description: |-
-  BOLT12 Pay is a self-hosted Lightning payments and identity app for LND nodes.
+  BOLT12 Pay is a self-hosted Lightning payments and identity app supporting LND + LNDK and Phoenixd wallets.
   It supports BOLT12 Offers, BIP353 and LNURL Lightning Addresses, optional BOLT11 fallback invoices, Nostr identities, NIP-05 and Zaps.
 
   BEFORE YOU INSTALL
@@ -88,12 +88,17 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/5429
 repo: https://github.com/Alex71btc/lndk-pay
 support: https://github.com/Alex71btc/lndk-pay/issues
 releaseNotes: |
-  BOLT12 Pay 0.3.24
+  BOLT12 Pay 0.3.26
 
-  - Live payment notifications with amount, payment type and optional comment.
-  - Tap or click satoshi amounts in Lightning Activity to copy them.
-  - Improved PWA cache handling and automatic updates.
-  - Android Companion 1.1.3 remains unchanged.
+  - Phoenixd wallet support alongside LND + LNDK.
+  - Switch payment backends while keeping existing wallet bindings.
+  - Wallet-specific NWC connections and payment history.
+  - Lightning Activity wallet filters and CSV export.
+  - BOLT11, BOLT12, BIP353, LNURL and Nostr Zap improvements.
+  - Android Companion 1.1.4 with payment deep links.
+  - Improved setup, notifications and five-language interface.
+  - Existing aliases, settings and history are preserved.
+  - Umbrel package currently requires the Lightning Node app.
 
   LNDK remains unchanged.
 
