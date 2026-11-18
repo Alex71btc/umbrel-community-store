@@ -9,17 +9,25 @@ category: bitcoin
 version: 0.3.26
 port: 8091
 description: |-
-  BOLT12 Pay is a self-hosted Lightning payments and identity app supporting LND + LNDK and Phoenixd wallets.
-  It supports BOLT12 Offers, BIP353 and LNURL Lightning Addresses, optional BOLT11 fallback invoices, Nostr identities, NIP-05 and Zaps.
+  BOLT12 Pay brings BOLT12 Offers to your LND node.
+
+  Create and receive BOLT12 payments, use BIP353 and LNURL Lightning Addresses,
+  manage Nostr identities and Zaps, and connect wallets through Nostr Wallet Connect (NWC).
+
+  NEW IN 0.3.26: PHOENIXD SUPPORT
+
+  Connect an existing Phoenixd wallet as an alternative or additional Lightning
+  backend. Switch between LND and Phoenixd while keeping existing addresses,
+  Offers, payment history and NWC connections tied to their original wallet.
 
   BEFORE YOU INSTALL
 
-  • Your LND node must be fully synced and have at least one active channel.
-  • LND v0.21 and newer need no manual BOLT12 configuration.
+  • Umbrel currently requires the Lightning Node app for installation.
+  • For LND payments, your node must be synced and have an active channel.
+  • Phoenixd is optional and can run on another server.
   • Direct BOLT12 Offers work without a domain.
   • Lightning Addresses and public payment pages require your own domain.
   • Cloudflare DNS automation and a Cloudflare Tunnel are optional.
-
   UMBREL OS 2.0
 
   Open BOLT12 Pay at:
@@ -61,7 +69,7 @@ description: |-
 
   BOLT12 Pay sends each notification as an encrypted NIP-04 self-DM from that same Nostr profile through the relays saved with the Identity. This keeps Zap notifications in the familiar private-message flow without introducing a second visible sender profile. The public Zap receipt still uses the relays requested by the paying client.
 
-  LND unlocks both encrypted keys automatically after app or node restarts. The private app-signer nsec is never displayed. Show app signer reveals only its public npub. Existing plaintext Nostr keys are encrypted during this update.
+  LND-backed keys are unlocked through LND; new standalone keys can use local encryption. The private app-signer nsec is never displayed. Show app signer reveals only its public npub. Existing plaintext Nostr keys are encrypted during this update.
 
   The saved notification nsec is never loaded back into the input field. To replace it, enter a new nsec and select Save new notification nsec. Regenerate app signer replaces only the internal signer key pair.
 
