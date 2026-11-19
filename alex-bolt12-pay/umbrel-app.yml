@@ -6,7 +6,7 @@ name: BOLT12 Pay
 icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/icon_v2.png
 tagline: Self-hosted Lightning payments and identity with BOLT12, BIP353, LNURL, and Nostr
 category: bitcoin
-version: 0.3.26
+version: 0.3.27
 port: 8091
 description: |-
   BOLT12 Pay brings BOLT12 Offers to your LND node.
@@ -96,19 +96,16 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/5429
 repo: https://github.com/Alex71btc/lndk-pay
 support: https://github.com/Alex71btc/lndk-pay/issues
 releaseNotes: |
-  BOLT12 Pay 0.3.26
+  BOLT12 Pay 0.3.27
 
-  - Phoenixd wallet support alongside LND + LNDK.
-  - Switch payment backends while keeping existing wallet bindings.
-  - Wallet-specific NWC connections and payment history.
-  - Lightning Activity wallet filters and CSV export.
-  - BOLT11, BOLT12, BIP353, LNURL and Nostr Zap improvements.
-  - Android Companion 1.1.4 with payment deep links.
-  - Improved setup, notifications and five-language interface.
-  - Existing aliases, settings and history are preserved.
-  - Umbrel package currently requires the Lightning Node app.
-
-  LNDK remains unchanged.
+  - Filter Lightning Activity by LND, Phoenixd, or all wallets. Export any date range as CSV for recordkeeping and bookkeeping.
+  - Connect an existing Phoenixd wallet alongside LND + LNDK. Offers, aliases and Nostr Wallet Connect connections keep their original wallet when you switch.
+  - Pay LNURL links and Lightning addresses, use LNURL-auth to sign in, and redeem LNURL-withdraw vouchers by scanning a QR code or pasting a link.
+  - Choose your wallet at the top of Setup. Use the updated QR menu to scan or decode, and open the Offer decoder from Create Offer when needed. Pay now previews BOLT12 minimum amounts.
+  - Open Lightning Activity directly from Pay and view incoming and outgoing liquidity on your LND channels. Phoenixd supports receiving Nostr Zaps.
+  - Tap a notification in Android Companion 1.1.4 to jump to the matching entry in Lightning Activity.
+  - Import existing Phoenixd history silently with an already paired Companion. The upgrade stops queued notifications for historical Phoenixd payments, and new payments still notify.
+  - Umbrel requires the Lightning Node app. Phoenixd is optional and can run on another server.
 
 dependencies:
   - lightning
