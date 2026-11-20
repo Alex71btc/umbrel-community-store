@@ -6,7 +6,7 @@ name: BOLT12 Pay
 icon: https://raw.githubusercontent.com/Alex71btc/umbrel-community-store/master/alex-bolt12-pay/icon_v2.png
 tagline: Self-hosted Lightning payments and identity with BOLT12, BIP353, LNURL, and Nostr
 category: bitcoin
-version: 0.3.28
+version: 0.3.29
 port: 8091
 description: |-
   BOLT12 Pay brings BOLT12 Offers to your LND node.
@@ -33,7 +33,10 @@ description: |-
   Open BOLT12 Pay at:
   https://umbrel.local:8091
 
-  On first launch, the setup screen opens automatically.
+  On first launch, sign in with the initial app password. The Umbrel owner can
+  retrieve it from the app's Settings → Advanced → Open terminal. Select the
+  web container and run `printenv BOLT12_PAY_INITIAL_PASSWORD`. Then finish
+  setup in BOLT12 Pay. If you have already set an app password, use that password.
 
   UmbrelOS 2.0 uses local HTTPS. Install Umbrel's Local HTTPS CA on every computer that opens the app. Allow camera access for the address including port 8091 if you want to use the QR scanner.
 
@@ -96,8 +99,10 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/5429
 repo: https://github.com/Alex71btc/lndk-pay
 support: https://github.com/Alex71btc/lndk-pay/issues
 releaseNotes: |
-  BOLT12 Pay 0.3.28
-  
+  BOLT12 Pay 0.3.29
+
+  - Umbrel supplies an initial BOLT12 Pay password before the web interface starts.
+    An existing BOLT12 Pay password takes precedence.
   - Connect an existing Phoenixd wallet alongside LND + LNDK and switch backends without changing the wallet assigned to Offers, aliases or NWC connections.
   - Filter Lightning Activity by wallet and export a selected date range as CSV. View channel liquidity from Pay.
   - Use LNURL-auth and LNURL-withdraw by scanning or pasting a link. Updated QR controls, grouped Offer decoding and BOLT12 minimum-amount previews simplify payments.
@@ -109,7 +114,7 @@ releaseNotes: |
   
   LNDK is unchanged.
   
-  https://github.com/Alex71btc/lndk-pay/releases/tag/v0.3.28
+  https://github.com/Alex71btc/lndk-pay/releases/tag/v0.3.29
 
 dependencies:
   - lightning
